@@ -1,4 +1,4 @@
-<section class="bg-[#A94091] py-24 bg-opacity-25">
+<section class="bg-[#A94091] py-24 bg-opacity-25 px-[25px]">
     <div
         class="flex flex-col justify-center items-center font-playfair max-w-[1300px] mx-auto py-12 gap-8 text-center"
     >
@@ -17,7 +17,7 @@ font-playfair"
             importantes que viviremos juntos. ¡No te pierdas ninguno!
         </p>
     </div>
-    <section class="timeline py-24 max-w-[600px] mx-auto">
+    <section class="timeline py-24 max-w-[800px] mx-auto px-[20px]">
         <div class="timeline-item">
             <div class="timeline-icon">
                 <img src="/img/icons/01.svg" alt="icon" />
@@ -156,19 +156,6 @@ font-playfair"
             text-align: left;
         }
 
-        .timeline-item::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            z-index: -1;
-            transition: all 0.3s ease;
-        }
-
         .timeline-item:nth-child(odd)::after {
             right: -50%;
         }
@@ -192,41 +179,44 @@ font-playfair"
             align-items: center;
             justify-content: center;
             z-index: 1;
+            padding: 5px;
             transition: all 0.3s ease;
-            border: 2px solid white;
         }
 
         .timeline-item:nth-child(odd) .timeline-icon {
-            right: -40px;
+            right: -45px;
         }
 
         .timeline-item:nth-child(even) .timeline-icon {
-            left: -40px;
+            left: -45px;
         }
 
         .timeline-icon img {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
 
         .timeline-content {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            border: 1px solid #a94091;
+
+            line-height: 1.2;
+            border-radius: 12px;
+            margin: 0 20px;
             z-index: 1;
+            text-transform: uppercase;
         }
 
         .timeline-time {
-            font-size: 20px;
+            font-size: 24px;
             color: #a94091;
-            font-weight: bold;
         }
 
         .timeline-title {
             margin-top: 5px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: normal;
+            font-family: "Amaline", serif;
             color: #333;
         }
 
