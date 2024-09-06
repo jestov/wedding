@@ -1,0 +1,304 @@
+<section class="gallery-slider-container pb-10 px-4 md:px-8 bg-white">
+    <div class="gallery-slider">
+        <!-- Gallery Slides -->
+        <div class="gallery-slide" data-image="/img/02.jpg">
+            <img src="/img/02.jpg" alt="Foto 02" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/03.jpg">
+            <img src="/img/03.jpg" alt="Foto 03" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/04.jpg">
+            <img src="/img/04.jpg" alt="Foto 04" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/05.jpg">
+            <img src="/img/05.jpg" alt="Foto 05" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/06.jpg">
+            <img src="/img/06.jpg" alt="Foto 06" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/07.jpg">
+            <img src="/img/07.jpg" alt="Foto 07" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/08.jpg">
+            <img src="/img/08.jpg" alt="Foto 08" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/09.jpg">
+            <img src="/img/09.jpg" alt="Foto 09" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/10.jpg">
+            <img src="/img/10.jpg" alt="Foto 10" class="gallery-image" />
+        </div>
+    </div>
+    <div class="dots">
+        <span class="dot" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+        <span class="dot" data-slide="5"></span>
+        <span class="dot" data-slide="6"></span>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox hidden">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-prev">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            class="h-8 w-8"
+        >
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+        </svg>
+    </span>
+    <span class="lightbox-next">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            class="h-8 w-8"
+        >
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"></path>
+        </svg>
+    </span>
+    <img class="lightbox-content" id="lightbox-image" src="" alt="" />
+</div>
+
+<style>
+    /* Slider Container */
+    .gallery-slider-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery-slider {
+        display: flex;
+        gap: 10px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .gallery-slide {
+        overflow: hidden;
+        min-width: calc(
+            100% / 3 - 10px
+        ); /* Considerar gap al calcular el ancho */
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+            transform 0.5s ease,
+            box-shadow 0.5s ease;
+    }
+
+    .gallery-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Dots Navigation */
+    .dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 3rem;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        background-color: #a94091;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        opacity: 0.2;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #a94091;
+        opacity: 1;
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+
+    .lightbox.hidden {
+        display: none;
+    }
+
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 95%;
+        object-fit: contain;
+        width: 100%; /* Asegura que ocupe el 100% del ancho */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 30px;
+        position: fixed;
+    }
+
+    .lightbox-prev {
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .lightbox-next {
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .lightbox-prev,
+        .lightbox-next {
+            padding: 5px;
+        }
+        .lightbox-prev svg,
+        .lightbox-next svg {
+            height: 24px;
+            width: 24px;
+        }
+
+        .gallery-slide {
+            min-width: 100%; /* 1 image per view on mobile */
+        }
+        .lightbox-content {
+            width: 100vw; /* Ocupa el 100% del ancho del viewport en móviles */
+            height: 100vh; /* Ajusta la altura automáticamente */
+            max-height: 100vh; /* Limita la altura al 100% de la altura del viewport */
+            object-fit: contain; /* Asegura que la imagen se ajuste sin distorsión */
+            padding: 0; /* Elimina cualquier padding que pueda estar afectando el tamaño */
+        }
+    }
+</style>
+
+<script>
+    const slider = document.querySelector(".gallery-slider");
+    const dots = document.querySelectorAll(".dot");
+    const slides = document.querySelectorAll(".gallery-slide");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxClose = document.querySelector(".lightbox-close");
+    const lightboxPrev = document.querySelector(".lightbox-prev");
+    const lightboxNext = document.querySelector(".lightbox-next");
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function updateSlider(index) {
+        const slideWidth =
+            slider.querySelector(".gallery-slide").clientWidth + 10; // Ajustar para incluir gap
+        slider.style.transform = `translateX(-${slideWidth * index}px)`;
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    }
+
+    function showLightbox(index) {
+        const imgSrc = slides[index].getAttribute("data-image");
+        lightboxImage.src = imgSrc;
+        lightbox.classList.remove("hidden");
+        document.body.style.overflow = "hidden"; // Desactiva el scroll
+        currentIndex = index;
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add("hidden");
+        document.body.style.overflow = ""; // Reactiva el scroll
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showLightbox(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showLightbox(currentIndex);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % dots.length;
+            updateSlider(currentIndex);
+        }, 5000);
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            stopAutoSlide();
+            currentIndex = index;
+            updateSlider(index);
+            startAutoSlide(); // Reanuda el auto-slide después de hacer clic
+        });
+    });
+
+    slides.forEach((slide, index) => {
+        slide.addEventListener("click", () => {
+            showLightbox(index);
+            stopAutoSlide();
+        });
+        slide.addEventListener("mouseenter", stopAutoSlide);
+        slide.addEventListener("mouseleave", startAutoSlide);
+    });
+
+    lightboxClose.addEventListener("click", () => {
+        closeLightbox();
+        startAutoSlide(); // Reanuda el auto-slide después de cerrar el lightbox
+    });
+
+    lightboxPrev.addEventListener("click", prevSlide);
+    lightboxNext.addEventListener("click", nextSlide);
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+            startAutoSlide(); // Reanuda el auto-slide después de cerrar el lightbox
+        }
+    });
+
+    // Set initial state
+    updateSlider(currentIndex);
+    startAutoSlide();
+</script>

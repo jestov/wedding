@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Amaline";
+    src: url("/fonts/Amaline.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "Cormorand Garamond", serif;
+    color: #333333;
+    background-color: #fff;
+    background-image: url("../img/bg.jpg");
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.font-cormorand {
+    font-family: "Cormorand Garamond", serif;
+}
+.font-playfair {
+    font-family: "Amaline", serif;
+    font-weight: lighter;
+}
+.text-primary {
+    color: #c49a6c;
+}
+.bg-primary {
+    background-color: #c49a6c;
+}
+.countdown {
+    font-size: 1.5rem;
+}
