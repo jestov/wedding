@@ -1,16 +1,19 @@
-<section class="bg-secondary pt-24 bg-opacity-15 px-[25px]">
+<section class="bg-secondary pt-12 lg:pt-24 bg-opacity-15 px-[25px]">
     <div
         class="flex flex-col justify-center items-center max-w-[1300px] mx-auto py-12 gap-8 text-center"
     >
         <h2
-            class="text-3xl md:text-7xl relative font-light italic text-primary before:absolute before:content-[''] before:w-20 before:h-[1px] before:bg-primary before:-left-24 before:top-1/2 before:transform after:absolute after:content-[''] after:w-20 after:h-[1px] after:bg-primary after:-right-24 after:top-1/2 after:transform"
+            class="text-5xl md:text-7xl relative font-light italic text-primary before:absolute before:content-[''] before:w-20 before:h-[1px] before:bg-primary before:-left-24 before:top-1/2 before:transform after:absolute after:content-[''] after:w-20 after:h-[1px] after:bg-primary after:-right-24 after:top-1/2 after:transform"
         >
             Itinerario
         </h2>
-        <p class="text-2xl text-gray-700 md:max-w-3xl font-light
-mx-auto">
+        <p
+            class="text-lg md:text-2xl text-gray-700 md:max-w-3xl font-light
+mx-auto"
+        >
             Estamos encantados de que nos acompañes en este día tan especial.<br
-            />A continuación, te compartimos el itinerario con los momentos más
+                class="hidden md:flex"
+            /> A continuación, te compartimos el itinerario con los momentos más
             importantes que viviremos juntos. ¡No te pierdas ninguno!
         </p>
     </div>
@@ -170,7 +173,8 @@ mx-auto">
             top: 0;
             width: 90px;
             height: 90px;
-            background-color: #9f217e;
+            background-color: #fff;
+            border: 2px solid #9f217e;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -201,6 +205,7 @@ mx-auto">
             margin: 0 20px;
             letter-spacing: 0.4px;
             z-index: 1;
+            min-width: 190px;
         }
 
         .timeline-time {
@@ -238,7 +243,7 @@ mx-auto">
             }
 
             .timeline-icon {
-                left: 0;
+                left: -20px !important;
             }
         }
     </style>
