@@ -1,23 +1,20 @@
-<section class="bg-[#A94091] py-24 bg-opacity-25 px-[25px]">
+<section class="bg-secondary pt-24 bg-opacity-15 px-[25px]">
     <div
-        class="flex flex-col justify-center items-center font-playfair max-w-[1300px] mx-auto py-12 gap-8 text-center"
+        class="flex flex-col justify-center items-center max-w-[1300px] mx-auto py-12 gap-8 text-center"
     >
         <h2
-            class="text-5xl relative font-playfair font-semibold text-[#A94091] before:absolute before:content-[''] before:w-20 before:h-[1px] before:bg-[#A94091] before:-left-24 before:top-1/3 before:transform after:absolute after:content-[''] after:w-20 after:h-[1px] after:bg-[#A94091] after:-right-24 after:top-1/3 after:transform"
+            class="text-3xl md:text-7xl relative font-light italic text-primary before:absolute before:content-[''] before:w-20 before:h-[1px] before:bg-primary before:-left-24 before:top-1/2 before:transform after:absolute after:content-[''] after:w-20 after:h-[1px] after:bg-primary after:-right-24 after:top-1/2 after:transform"
         >
-            ITINERARIO
+            Itinerario
         </h2>
-        <p
-            class="text-lg text-gray-700 text-opacity-90 md:max-w-2xl
-mx-auto
-font-playfair"
-        >
-            Estamos encantados de que nos acompañes en este día tan especial. A
-            continuación, te compartimos el itinerario con los momentos más
+        <p class="text-2xl text-gray-700 md:max-w-3xl font-light
+mx-auto">
+            Estamos encantados de que nos acompañes en este día tan especial.<br
+            />A continuación, te compartimos el itinerario con los momentos más
             importantes que viviremos juntos. ¡No te pierdas ninguno!
         </p>
     </div>
-    <section class="timeline py-24 max-w-[800px] mx-auto px-[20px]">
+    <section class="timeline pb-24 max-w-[800px] mx-auto px-[20px]">
         <div class="timeline-item">
             <div class="timeline-icon">
                 <img src="/img/icons/01.svg" alt="icon" />
@@ -123,7 +120,7 @@ font-playfair"
     <style>
         .timeline {
             position: relative;
-            padding: 50px 0;
+            padding-bottom: 50px;
             margin-top: 20px;
         }
 
@@ -134,7 +131,7 @@ font-playfair"
             left: 50%;
             width: 2px;
             height: 100%;
-            background-color: #a94091;
+            background-color: #9f217e;
             transform: translateX(-50%);
         }
 
@@ -173,7 +170,7 @@ font-playfair"
             top: 0;
             width: 90px;
             height: 90px;
-            background-color: #a94091;
+            background-color: #9f217e;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -198,25 +195,24 @@ font-playfair"
 
         .timeline-content {
             padding: 15px 20px;
-            border: 1px solid #a94091;
-
+            font-weight: 300;
             line-height: 1.2;
             border-radius: 12px;
             margin: 0 20px;
+            letter-spacing: 0.4px;
             z-index: 1;
-            text-transform: uppercase;
         }
 
         .timeline-time {
-            font-size: 24px;
-            color: #a94091;
+            font-size: 32px;
+            color: #9f217e;
         }
 
         .timeline-title {
             margin-top: 5px;
-            font-size: 20px;
-            font-weight: normal;
-            font-family: "Amaline", serif;
+            font-size: 26px;
+            font-weight: 300;
+            font-family: "EditorsNote", serif;
             color: #333;
         }
 

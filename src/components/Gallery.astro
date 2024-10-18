@@ -1,8 +1,9 @@
 <section class="gallery-slider-container pb-10 px-4 md:px-8 bg-white">
     <div class="gallery-slider">
         <!-- Gallery Slides -->
-        <div class="gallery-slide" data-image="/img/02.jpg">
-            <img src="/img/02.jpg" alt="Foto 02" class="gallery-image" />
+
+        <div class="gallery-slide" data-image="/img/12.jpg">
+            <img src="/img/12.jpg" alt="Foto 10" class="gallery-image" />
         </div>
         <div class="gallery-slide" data-image="/img/03.jpg">
             <img src="/img/03.jpg" alt="Foto 03" class="gallery-image" />
@@ -28,6 +29,15 @@
         <div class="gallery-slide" data-image="/img/10.jpg">
             <img src="/img/10.jpg" alt="Foto 10" class="gallery-image" />
         </div>
+        <div class="gallery-slide" data-image="/img/11.jpg">
+            <img src="/img/11.jpg" alt="Foto 10" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/02.jpg">
+            <img src="/img/02.jpg" alt="Foto 02" class="gallery-image" />
+        </div>
+        <div class="gallery-slide" data-image="/img/13.jpg">
+            <img src="/img/13.jpg" alt="Foto 02" class="gallery-image" />
+        </div>
     </div>
     <div class="dots">
         <span class="dot" data-slide="0"></span>
@@ -37,6 +47,9 @@
         <span class="dot" data-slide="4"></span>
         <span class="dot" data-slide="5"></span>
         <span class="dot" data-slide="6"></span>
+        <span class="dot" data-slide="7"></span>
+        <span class="dot" data-slide="8"></span>
+        <span class="dot" data-slide="9"></span>
     </div>
 </section>
 
@@ -114,7 +127,7 @@
     .dot {
         width: 12px;
         height: 12px;
-        background-color: #a94091;
+        background-color: #9f217e;
         display: inline-block;
         transition: background-color 0.3s ease;
         opacity: 0.2;
@@ -123,7 +136,7 @@
     }
 
     .dot.active {
-        background-color: #a94091;
+        background-color: #9f217e;
         opacity: 1;
     }
 
@@ -262,7 +275,7 @@
         autoSlideInterval = setInterval(() => {
             currentIndex = (currentIndex + 1) % dots.length;
             updateSlider(currentIndex);
-        }, 5000);
+        }, 6000);
     }
 
     dots.forEach((dot, index) => {

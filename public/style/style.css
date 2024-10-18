@@ -5,10 +5,9 @@
     font-style: normal;
 }
 body {
-    font-family: "Cormorand Garamond", serif;
+    font-family: "EditorsNote", serif;
     color: #333333;
     background-color: #fff;
-    background-image: url("../img/bg.jpg");
     margin: 0;
     height: 100%;
     width: 100%;
@@ -23,7 +22,7 @@ html {
     overflow-x: hidden !important;
 }
 .font-cormorand {
-    font-family: "Cormorand Garamond", serif;
+    font-family: "EditorsNote", serif;
 }
 .font-playfair {
     font-family: "Amaline", serif;
@@ -37,4 +36,127 @@ html {
 }
 .countdown {
     font-size: 1.5rem;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Bold-iF664322be38357.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-BoldItalic-iF664322be3e863.otf")
+        format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Extralight-iF664322be43be3.otf")
+        format("opentype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-ExtralightItalic-iF664322be48dd8.otf")
+        format("opentype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Hairline-iF664322be4e4fb.otf")
+        format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-HairlineItalic-iF664322be52ef6.otf")
+        format("opentype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Italic-iF664322be57316.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Light-iF664322be5b734.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-LightItalic-iF664322be6092b.otf")
+        format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Medium-iF664322be6500a.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-MediumItalic-iF664322be6a12d.otf")
+        format("opentype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Regular-iF664322be6e849.otf")
+        format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Semibold-iF664322be731c3.otf")
+        format("opentype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-SemiboldItalic-iF664322be785e3.otf")
+        format("opentype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-Thin-iF664322be7fa2e.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "EditorsNote";
+    src: url("/fonts/EditorsNote-ThinItalic-iF664322be84b79.otf")
+        format("opentype");
+    font-weight: 100;
+    font-style: italic;
 }
